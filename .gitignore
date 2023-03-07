@@ -1,0 +1,18 @@
+# Django
+
+*.log
+*.pot
+*.pyc
+__pycache__
+*.sqlite3
+whole.json
+media
+venv
+*.env
+*/**/migrations/__pycache__
+
+# Node
+
+node_modules
+static/dist
+.sqlite3
