@@ -17,7 +17,9 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
-      return (<div><h2 class="title">Huy sobachi</h2></div>);
+      return (
+        <div><h2 class="title">Huy sobachi</h2></div>
+        );
     }
 
     return (
