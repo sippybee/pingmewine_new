@@ -1,5 +1,5 @@
 "use strict";
-<h2 class="title">Empowering businesses with SaaS technology</h2>
+
 
 const e = React.createElement;
 
