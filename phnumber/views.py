@@ -13,9 +13,9 @@ from .models import Deal
 from .forms import ClientForm
 logger = logging.getLogger(__name__)
 
-twilio_account_sid = settings.twilio_account_sid
-twilio_auth_token = settings.twilio_auth_token
-twilio_number = settings.twilio_number
+twilio_account_sid = os.getenv('TWILIO_ACCOUNT_SID')
+twilio_auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+twilio_number = os.getenv('TWILIO_NUMBER')
 
 
 def send_message(request):

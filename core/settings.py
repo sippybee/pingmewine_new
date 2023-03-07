@@ -61,9 +61,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'core.urls'
 
 # Twilio
-twilio_account_sid = os.getenv('TWILIO_ACCOUNT_SID')
-twilio_auth_token = os.getenv('TWILIO_AUTH_TOKEN')
-twilio_number = os.getenv('TWILIO_NUMBER')
+
 
 
 TEMPLATES = [
