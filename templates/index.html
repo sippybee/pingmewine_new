@@ -162,7 +162,7 @@
                 <div class="col-lg-6 wow animated fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
                     <div class="section-title mb-0">
                         <h6 class="sub-title">ABOUT US</h6>
-                        <h2 class="title">Empowering businesses with SaaS technology</h2>
+                        <div id="like_button_container"></div>
                         <p class="content mb-4">We use morden tech,such as time series analysis, regression analysis, and deep learning, to find rare and undervalued wines.</p>
                         <div class="row">
                             <div class="col-md-6">
@@ -624,6 +624,11 @@
 
 
     <!-- all plugins here -->
+    <!-- Load our React component. -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="{% static 'myreactfiles/like_button.js' %}"></script>
     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
     <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/fontawesome.min.js' %}"></script>
