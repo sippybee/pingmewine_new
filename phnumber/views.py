@@ -13,19 +13,20 @@ from .models import Deal
 from .forms import ClientForm
 logger = logging.getLogger(__name__)
 
+twilio_account_sid = settings.twilio_account_sid
+twilio_auth_token = settings.twilio_auth_token
+twilio_number = settings.twilio_number
 
 
+def send_message(request):
 
+    client = Client(twilio_account_sid, twilio_auth_token)
 
-# def send_message(request):
-
-#     client = Client(twilio_account_sid, twilio_auth_token)
-
-#     message = client.messages.create(
-#         body='Hi, your test result is Make fucking sale already. Great job',
-#         from_=twilio_number,
-#         to='+12013136587' 
-#     )
+    message = client.messages.create(
+        body='Hi, your test result is Make fucking sale already. Great job',
+        from_=twilio_number,
+        to='+12013136587' 
+    )
 
 
 
