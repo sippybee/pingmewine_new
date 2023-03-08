@@ -57,7 +57,7 @@ class PingMeView(View):
         # modules = Module.objects.all()
         # context["modules"] = modules
         print("GGGGET")
-        return render(request, 'index.html', context)
+        return render(request, "index_api.html", context)
 
     def post(self, request, *args, **kwargs):
         print("Hi")
@@ -107,4 +107,4 @@ class PingMeView(View):
         # messages.error(request, "Something went wrong. Please email us at python@artyudin.com" )
         print("Not valid")
 
-        return render(request, 'index.html', {'form': form})
+        return render(request, "index_api.html", {'form': form})
