@@ -20,13 +20,17 @@ class LikeButton extends React.Component {
     event.preventDefault();
     console.log('Phone:', this.state.phone);
   }
-//   componentDidMount() {
-//     axios.get(`http://128.199.5.86/api/market/ford/mustang/`).then((res) => {
-//       console.log(res);
-//       const years = res.data;
-//       this.setState({ years });
-//     });
-//   }
+  componentDidMount() {
+    axios.post('https://sippybee.com/ping/api/create/', {
+      data: {"phone_number":this.state.phone}
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
 
   render() {
     return (
