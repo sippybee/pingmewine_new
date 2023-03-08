@@ -22,7 +22,7 @@ class LikeButton extends React.Component {
   }
   componentDidMount() {
     axios.post('https://sippybee.com/ping/api/create/', {
-      data: {"phone_number":this.state.phone}
+      "phone_number":this.state.phone
     })
     .then(function (response) {
       console.log(response);
