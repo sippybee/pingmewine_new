@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
 
 </head>
+
 <body>
 
     <!-- preloader area start -->
@@ -51,8 +53,8 @@
     <nav class="navbar navbar-area navbar-area-2 navbar-expand-lg">
         <div class="container nav-container">
             <div class="responsive-mobile-menu">
-                <button class="menu toggle-btn d-block d-lg-none" data-target="#itech_main_menu" 
-                aria-expanded="false" aria-label="Toggle navigation">
+                <button class="menu toggle-btn d-block d-lg-none" data-target="#itech_main_menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="icon-left"></span>
                     <span class="icon-right"></span>
                 </button>
@@ -111,37 +113,33 @@
     <!-- navbar end -->
 
     <!-- page title start -->
-    <div class="banner-area bg-relative banner-area-2 bg-cover" style="background-image: url({% static '/assets/img/bg/8.png' %});">
+    <div class="banner-area bg-relative banner-area-2 bg-cover"
+        style="background-image: url({% static '/assets/img/bg/8.png' %});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="banner-inner pe-xl-5">
-                        <h6 class="subtitle wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">Constantly scraping the market to get amazing deals</h6>
-                        <h2 class="title wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">Get outstanding <span>value wines</span> on your phone.</h2>
-                        <p class="content pe-xl-5 wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">We use data mining and machine learning to unsure you get great wines at unbeatable prices.</p>
-                        <form action="" class="comment-form" method="POST">
-                        <div class="col-md-12">
-                            {% csrf_token %}
-                            <div class="single-input-inner">
-                                <input type="text" name="phone" placeholder="Your Phone Number e.g. 5062345678" id=""phone>
-                            </div>
-                        </div>
-                        <div class="buttons">
-                        <button class="btn btn-border-base wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.6s" type="submit">Sign me up! I'am 21+</button>
-                        <div class="d-inline-block align-self-center wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.7s">
-                            <a class="video-play-btn-hover" href="https://www.youtube.com/embed/Wimkqo8gDZ0"><img src="{% static 'assets/img/video.svg' %}" alt="img"> <h6 class="d-inline-block">how we work</h6></a>
-                        </div>
-                        </div>
-                    </form>
+                        <h6 class="subtitle wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                            Constantly scraping the market to get amazing deals</h6>
+                        <h2 class="title wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">Get
+                            outstanding <span>value wines</span> on your phone.</h2>
+                        <p class="content pe-xl-5 wow animated fadeInLeft" data-wow-duration="1.5s"
+                            data-wow-delay="0.5s">We use data mining and machine learning to unsure you get great wines
+                            at unbeatable prices.</p>
+                        <div id="like_button_container"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-9 wow animated fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
                     <div class="banner-thumb-2 mt-4 mt-lg-0">
-                        <img class="banner-animate-img banner-animate-img-4" src="{% static 'assets/img/banner-2/3.png' %}" alt="img">
+                        <img class="banner-animate-img banner-animate-img-4"
+                            src="{% static 'assets/img/banner-2/3.png' %}" alt="img">
                         <div class="main-img-wrap">
-                            <img class="banner-animate-img banner-animate-img-1 left_image_bounce" src="{% static 'assets/img/banner-2/4.png' %}" alt="img">
-                            <img class="banner-animate-img banner-animate-img-2 left_image_bounce" src="{% static 'assets/img/banner-2/6.png' %}" alt="img">
-                            <img class="banner-animate-img banner-animate-img-3 top_image_bounce" src="{% static 'assets/img/banner-2/2.png' %}" alt="img">
+                            <img class="banner-animate-img banner-animate-img-1 left_image_bounce"
+                                src="{% static 'assets/img/banner-2/4.png' %}" alt="img">
+                            <img class="banner-animate-img banner-animate-img-2 left_image_bounce"
+                                src="{% static 'assets/img/banner-2/6.png' %}" alt="img">
+                            <img class="banner-animate-img banner-animate-img-3 top_image_bounce"
+                                src="{% static 'assets/img/banner-2/2.png' %}" alt="img">
                             <img class="main-img" src="{% static 'assets/img/banner-2/1.png' %}" alt="img">
                         </div>
                     </div>
@@ -155,7 +153,8 @@
     <div class="about-area pd-top-120 pd-bottom-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0 wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                <div class="col-lg-6 mb-4 mb-lg-0 wow animated fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.3s">
                     <div class="about-thumb-inner">
                         <img class="main-img" src="{% static 'assets/img/about/10.png' %}" alt="img">
                     </div>
@@ -163,8 +162,9 @@
                 <div class="col-lg-6 wow animated fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
                     <div class="section-title mb-0">
                         <h6 class="sub-title">ABOUT US</h6>
-                        <div id="like_button_container"></div>
-                        <p class="content mb-4">We use morden tech,such as time series analysis, regression analysis, and deep learning, to find rare and undervalued wines.</p>
+
+                        <p class="content mb-4">We use morden tech,such as time series analysis, regression analysis,
+                            and deep learning, to find rare and undervalued wines.</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="single-list-inner style-check style-heading style-check mb-3">
@@ -179,7 +179,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <p class="content">SaaS providers typically invest heavily in security measures to protect customer data, such as encryption and multi-factor authentication. However, it is important to research and choose a reputable provider and also to ensure that</p>
+                        <p class="content">SaaS providers typically invest heavily in security measures to protect
+                            customer data, such as encryption and multi-factor authentication. However, it is important
+                            to research and choose a reputable provider and also to ensure that</p>
                         <a class="btn btn-border-base" href="about.html">Discover More <i class="fa fa-plus"></i></a>
                     </div>
                 </div>
@@ -188,7 +190,8 @@
     </div>
     <!-- about area end -->
     <!-- counter area start -->
-    <div class="counter-area bg-relative bg-cover pd-top-110 pd-bottom-100" style="background-image: url({% static 'assets/img/bg/10.png' %});">
+    <div class="counter-area bg-relative bg-cover pd-top-110 pd-bottom-100"
+        style="background-image: url({% static 'assets/img/bg/10.png' %});">
         <div class="container pd-bottom-90">
             <div class="row">
                 <div class="col-lg-3 col-md-6 wow animated fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
@@ -230,8 +233,8 @@
                             <img src="{% static 'assets/img/icon/19.svg' %}" alt="img">
                         </div>
                         <div class="media-body">
-                        <h4 class="mb-1"><span class="counter">200</span>+</h4>
-                        <p class="mb-0">Team member</p>
+                            <h4 class="mb-1"><span class="counter">200</span>+</h4>
+                            <p class="mb-0">Team member</p>
                         </div>
                     </div>
                 </div>
@@ -252,41 +255,55 @@
                         <div class="section-title mb-0">
                             <h6 class="sub-title">GET IN TOUCH</h6>
                             <h2 class="title">Performance with SaaS</h2>
-                            <p class="content">For your car we will do everything  advice design in us repairs and maintenance. We are the some preferred.</p>
-                            <div class="accordion accordion-inner style-3 accordion-icon-left mt-3" id="accordionExample">
+                            <p class="content">For your car we will do everything advice design in us repairs and
+                                maintenance. We are the some preferred.</p>
+                            <div class="accordion accordion-inner style-3 accordion-icon-left mt-3"
+                                id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What services do you offer?
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            What services do you offer?
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, search for 'lorem ipsum' will uncover 
+                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, search for 'lorem ipsum' will uncover
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
                                             How long does it take for you to complete a project?
                                         </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, search for 'lorem ipsum' will uncover 
+                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, search for 'lorem ipsum' will uncover
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
                                             How much does it cost to work with your agency?
                                         </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, search for 'lorem ipsum' will uncover 
+                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, search for 'lorem ipsum' will uncover
                                         </div>
                                     </div>
                                 </div>
@@ -316,7 +333,8 @@
                             </div>
                             <div class="details">
                                 <h5 class="mb-3">Requirements</h5>
-                                <p class="content">Research ipsum dolor sit consec tetur sed diam in the aliquam tempor</p>  
+                                <p class="content">Research ipsum dolor sit consec tetur sed diam in the aliquam tempor
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -328,7 +346,8 @@
                             </div>
                             <div class="details">
                                 <h5 class="mb-3">planning</h5>
-                                <p class="content">Create ipsum dolor sit consec tetur sed diam in the aliquam tempor</p>  
+                                <p class="content">Create ipsum dolor sit consec tetur sed diam in the aliquam tempor
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -340,7 +359,8 @@
                             </div>
                             <div class="details">
                                 <h5 class="mb-3">Implementation</h5>
-                                <p class="content">Develope ipsum dolor sit consec tetur sed diam in the aliquam tempor</p>  
+                                <p class="content">Develope ipsum dolor sit consec tetur sed diam in the aliquam tempor
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -352,7 +372,7 @@
                             </div>
                             <div class="details">
                                 <h5 class="mb-3">Maintenance</h5>
-                                <p class="content">Shop ipsum dolor sit consec tetur Malesuada sed diam in the</p>  
+                                <p class="content">Shop ipsum dolor sit consec tetur Malesuada sed diam in the</p>
                             </div>
                         </div>
                     </div>
@@ -363,13 +383,15 @@
     <!-- work-process-area end -->
 
     <!-- testimonial-area start -->
-    <div class="testimonial-area pd-top-120 pd-bottom-90" style="background-image: url({% static '/assets/img/bg/11.png' %});">
+    <div class="testimonial-area pd-top-120 pd-bottom-90"
+        style="background-image: url({% static '/assets/img/bg/11.png' %});">
         <div class="container">
             <div class="section-title">
                 <h6 class="sub-title">TESTIMONIAL</h6>
                 <h2 class="title">Advanced Engine Services</h2>
             </div>
-            <div class="testimonial-slider-1 owl-carousel slider-control-round slider-control-dots slider-control-right-top">
+            <div
+                class="testimonial-slider-1 owl-carousel slider-control-round slider-control-dots slider-control-right-top">
                 <div class="item">
                     <div class="single-testimonial-inner style-1 text-center">
                         <h5>Devon Lane</h5>
@@ -377,7 +399,8 @@
                         <div class="icon mb-2">
                             <img src="{% static 'assets/img/icon/25.png' %}" alt="img">
                         </div>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC</p>
                         <div class="ratting-inner mt-4">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -397,7 +420,8 @@
                         <div class="icon mb-2">
                             <img src="{% static 'assets/img/icon/25.png' %}" alt="img">
                         </div>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC</p>
                         <div class="ratting-inner mt-4">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -417,7 +441,8 @@
                         <div class="icon mb-2">
                             <img src="{% static 'assets/img/icon/25.png' %}" alt="img">
                         </div>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC</p>
                         <div class="ratting-inner mt-4">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -437,7 +462,8 @@
                         <div class="icon mb-2">
                             <img src="{% static 'assets/img/icon/25.png" alt="img">
                         </div>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC</p>
                         <div class="ratting-inner mt-4">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -478,8 +504,10 @@
                                 <li><i class="far fa-user"></i> By Admin</li>
                                 <li><i class="far fa-folder-open"></i> Category</li>
                             </ul>
-                            <h5 class="mb-3"><a href="blog-details.html">Transforming businesses, one pixel at a time</a></h5>
-                            <a class="read-more-text" href="blog-details.html">Discover More <i class="fa fa-plus"></i></a>
+                            <h5 class="mb-3"><a href="blog-details.html">Transforming businesses, one pixel at a
+                                    time</a></h5>
+                            <a class="read-more-text" href="blog-details.html">Discover More <i
+                                    class="fa fa-plus"></i></a>
                         </div>
                     </div>
                 </div>
@@ -494,8 +522,10 @@
                                 <li><i class="far fa-user"></i> By Admin</li>
                                 <li><i class="far fa-folder-open"></i> Category</li>
                             </ul>
-                            <h5 class="mb-3"><a href="blog-details.html">The Importance of a Strong Digital for Strategy</a></h5>
-                            <a class="read-more-text" href="blog-details.html">Discover More <i class="fa fa-plus"></i></a>
+                            <h5 class="mb-3"><a href="blog-details.html">The Importance of a Strong Digital for
+                                    Strategy</a></h5>
+                            <a class="read-more-text" href="blog-details.html">Discover More <i
+                                    class="fa fa-plus"></i></a>
                         </div>
                     </div>
                 </div>
@@ -510,8 +540,10 @@
                                 <li><i class="far fa-user"></i> By Admin</li>
                                 <li><i class="far fa-folder-open"></i> Category</li>
                             </ul>
-                            <h5 class="mb-3"><a href="blog-details.html">Creating Engaging Content: A Guide for Digital</a></h5>
-                            <a class="read-more-text" href="blog-details.html">Discover More <i class="fa fa-plus"></i></a>
+                            <h5 class="mb-3"><a href="blog-details.html">Creating Engaging Content: A Guide for
+                                    Digital</a></h5>
+                            <a class="read-more-text" href="blog-details.html">Discover More <i
+                                    class="fa fa-plus"></i></a>
                         </div>
                     </div>
                 </div>
@@ -569,7 +601,8 @@
                         <h4 class="widget-title">Contact us</h4>
                         <div class="widget widget_contact">
                             <ul class="details">
-                                <li><i class="fa fa-map-marker-alt"></i>4517 Washington Ave. Manchester, Kentucky 39495</li>
+                                <li><i class="fa fa-map-marker-alt"></i>4517 Washington Ave. Manchester, Kentucky 39495
+                                </li>
                                 <li class="mt-3"><i class="fa fa-phone-alt"></i> (+888) 123 456 765</li>
                                 <li class="mt-2"><i class="fas fa-envelope"></i> infoname@mail.com</li>
                             </ul>
@@ -604,7 +637,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 align-self-center">
-                        <p>© Yoursitename  2023 | All Rights Reserved</p>
+                        <p>© Yoursitename 2023 | All Rights Reserved</p>
                     </div>
                     <div class="col-md-6 text-lg-end">
                         <a href="#">Trams & Condition</a>
@@ -644,4 +677,5 @@
     <!-- main js  -->
     <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
+
 </html>

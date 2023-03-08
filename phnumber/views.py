@@ -33,7 +33,7 @@ def send_message(request):
 
 class DealDetailView(ListView):
     model = Deal
-    template_name = "index.html"
+    template_name = "index_api.html"
 
     def get_context_data(self, *args, **kwargs):
         context = super(DealDetailView, self).get_context_data(*args, **kwargs)
