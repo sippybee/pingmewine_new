@@ -4,7 +4,7 @@ const e = React.createElement;
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { phone: "" };
+    this.state = { phone: "", sent: false };
   }
   handleInputChange = event => {
     const target = event.target;
@@ -23,24 +23,23 @@ class LikeButton extends React.Component {
     })
     .then(function (response) {
       console.log(response);
+      this.setState({
+        sent: true
+      });
     })
     .catch(function (error) {
       console.log(error);
     });
   }
-//   componentDidMount() {
-//     axios.post('https://sippybee.com/ping/api/create/', {
-//       "phone_number":this.state.phone
-//     })
-//     .then(function (response) {
-//       console.log(response);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-//   }
 
   render() {
+    if (this.state.successMessage) {
+        return (
+          <div>
+            <h5 class="title wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">We got your <span>{this.state.phone}</span>number!</h5>
+          </div>
+        );
+      }
     return (
         <form onSubmit={this.handleSubmit} className="comment-form" method="POST">
                         <div className="col-md-12">
