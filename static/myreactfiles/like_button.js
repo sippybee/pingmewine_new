@@ -40,7 +40,7 @@ class LikeButton extends React.Component {
                         <div className="buttons">
                         <button className="btn btn-border-base wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.6s" type="submit">Sign me up! I'am 21+</button>
                         <div className="d-inline-block align-self-center wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.7s">
-                            <a className="video-play-btn-hover" href="https://www.youtube.com/embed/Wimkqo8gDZ0"><img src="{% static 'assets/img/video.svg' %}" alt="img"> <h6 class="d-inline-block">how we work</h6></a>
+                            <a className="video-play-btn-hover" href="https://www.youtube.com/embed/Wimkqo8gDZ0"> <h6 className="d-inline-block">how we work</h6></a>
                         </div>
                         </div>
                     </form>
