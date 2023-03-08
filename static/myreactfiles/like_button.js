@@ -21,12 +21,12 @@ class LikeButton extends React.Component {
     axios.post('https://sippybee.com/ping/api/create/', {
       "phone_number":this.state.phone
     })
-    .then(function (response) {
-      console.log(response);
-      this.setState({
-        sent: true
-      });
-    })
+    .then(response => {
+        console.log(response);
+        this.setState({
+          sent: true
+        });
+      })
     .catch(function (error) {
       console.log(error);
     });
