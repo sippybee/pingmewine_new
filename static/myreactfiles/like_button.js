@@ -33,7 +33,7 @@ class LikeButton extends React.Component {
   }
 
   render() {
-    if (this.state.successMessage) {
+    if (this.state.sent) {
         return (
           <div>
             <h5 class="title wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">We got your <span>{this.state.phone}</span>number!</h5>
