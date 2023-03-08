@@ -18,9 +18,6 @@ class LikeButton extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log('Phone:', this.state.phone);
-  }
-  componentDidMount() {
     axios.post('https://sippybee.com/ping/api/create/', {
       "phone_number":this.state.phone
     })
@@ -31,6 +28,17 @@ class LikeButton extends React.Component {
       console.log(error);
     });
   }
+//   componentDidMount() {
+//     axios.post('https://sippybee.com/ping/api/create/', {
+//       "phone_number":this.state.phone
+//     })
+//     .then(function (response) {
+//       console.log(response);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+//   }
 
   render() {
     return (
