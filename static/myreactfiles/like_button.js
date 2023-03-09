@@ -4,7 +4,7 @@ const e = React.createElement;
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { phone: "", sent: false };
+    this.state = { phone: "", sent: false, error:false };
   }
   handleInputChange = event => {
     const target = event.target;
@@ -29,6 +29,9 @@ class LikeButton extends React.Component {
       })
     .catch(function (error) {
       console.log(error);
+      this.setState({
+        error: true
+      });
     });
   }
 
@@ -36,13 +39,16 @@ class LikeButton extends React.Component {
     if (this.state.sent) {
         return (
           <div>
-            <h5 class="title wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">We got your <span>{this.state.phone}</span>number!</h5>
+            <h5 className="wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">We got your number!</h5>
           </div>
         );
       }
     return (
         <form onSubmit={this.handleSubmit} className="comment-form" method="POST">
                         <div className="col-md-12">
+                        {this.state.error ? (
+                                <h6 class="subtitle wow  fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInLeft;">Something went wrong use, 1234567890 format</h6>
+                              ) : <h6></h6>}
                             <div className="single-input-inner">
                                 <input value={this.state.phone}
             onChange={this.handleInputChange} type="text" name="phone" placeholder="Your Phone Number e.g. 5062345678" id="phone"/>
