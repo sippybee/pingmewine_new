@@ -27,12 +27,12 @@ class LikeButton extends React.Component {
           sent: true
         });
       })
-    .catch(function (error) {
-      console.log(error);
-      this.setState({
-        error: true
+    .catch((error) => {
+        console.log(error);
+        this.setState({
+          error: true
+        });
       });
-    });
   }
 
   render() {
