@@ -76,7 +76,7 @@ class LikeButton extends React.Component {
           </div>
         </div>
         <div className="buttons">
-          <button
+          <a><button
             className="btn btn-border-base wow animated fadeInLeft"
             data-wow-duration="1.5s"
             data-wow-delay="0.6s"
@@ -88,7 +88,7 @@ class LikeButton extends React.Component {
             }}
           >
             Sign me up! I'am 21+
-          </button>
+          </button></a>
           <div
             className="d-inline-block align-self-center wow animated fadeInLeft"
             data-wow-duration="1.5s"
@@ -98,7 +98,7 @@ class LikeButton extends React.Component {
               className="video-play-btn-hover"
               href="https://www.youtube.com/embed/Wimkqo8gDZ0"
             >
-              <i className="fa fa-play-circle"></i>
+              <i className="fa fa-play-circle fa-2x"></i>
               <h6 className="d-inline-block">how we work</h6>
             </a>
           </div>
