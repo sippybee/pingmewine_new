@@ -79,7 +79,7 @@ class LikeButton extends React.Component {
             type="submit"
             onClick={() => {
               if (this.state.error) {
-                this.setState({ phone: "", error: false });
+                this.setState({  error: false });
               }
             }}
           >
