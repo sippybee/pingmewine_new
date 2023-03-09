@@ -47,7 +47,7 @@ class LikeButton extends React.Component {
         <form onSubmit={this.handleSubmit} className="comment-form" method="POST">
                         <div className="col-md-12">
                         {this.state.error ? (
-                                <h6 className="subtitle wow  fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInLeft;">Something went wrong use, 1234567890 format</h6>
+                                <h6 className="subtitle wow  fadeInLeft animated">Something went wrong use, 1234567890 format</h6>
                               ) : <h6></h6>}
                             <div className="single-input-inner">
                                 <input value={this.state.phone}
@@ -57,7 +57,7 @@ class LikeButton extends React.Component {
                         <div className="buttons">
                         <button className="btn btn-border-base wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.6s" type="submit">Sign me up! I'am 21+</button>
                         <div className="d-inline-block align-self-center wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.7s">
-                            <a className="video-play-btn-hover" href="https://www.youtube.com/embed/Wimkqo8gDZ0"> <h6 className="d-inline-block">how we work</h6></a>
+                            <a className="video-play-btn-hover" href="https://www.youtube.com/embed/Wimkqo8gDZ0"><img src="{% static 'assets/img/video.svg' %}" alt="img" /><h6 className="d-inline-block">how we work</h6></a>
                         </div>
                         </div>
                     </form>
