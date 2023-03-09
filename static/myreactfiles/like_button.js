@@ -33,6 +33,9 @@ class LikeButton extends React.Component {
         this.setState({
           error: true,
         });
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
       });
   };
 
@@ -81,9 +84,6 @@ class LikeButton extends React.Component {
             onClick={() => {
               if (this.state.error) {
                 this.setState({  error: false });
-                setTimeout(() => {
-                  window.location.reload();
-                }, 15000);
               }
             }}
           >
