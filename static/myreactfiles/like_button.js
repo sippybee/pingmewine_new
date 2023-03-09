@@ -47,7 +47,7 @@ class LikeButton extends React.Component {
         <form onSubmit={this.handleSubmit} className="comment-form" method="POST">
                         <div className="col-md-12">
                         {this.state.error ? (
-                                <h6 class="subtitle wow  fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInLeft;">Something went wrong use, 1234567890 format</h6>
+                                <h6 className="subtitle wow  fadeInLeft animated" data-wow-duration="1.5s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1.5s; animation-delay: 0.3s; animation-name: fadeInLeft;">Something went wrong use, 1234567890 format</h6>
                               ) : <h6></h6>}
                             <div className="single-input-inner">
                                 <input value={this.state.phone}
