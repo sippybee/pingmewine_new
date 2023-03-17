@@ -94,13 +94,6 @@ class LikeButton extends React.Component {
             data-wow-duration="1.5s"
             data-wow-delay="0.7s"
           >
-            <a
-              className="video-play-btn-hover"
-              href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-             > 
-              <i className="fa-regular fa-circle-play"></i>
-              <h6 className="d-inline-block">how we work</h6>
-            </a>
           </div>
         </div>
       </form>
