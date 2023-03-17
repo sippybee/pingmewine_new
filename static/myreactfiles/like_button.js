@@ -72,6 +72,7 @@ class LikeButton extends React.Component {
               name="phone"
               placeholder="Your Phone Number e.g. 5062345678"
               id="phone"
+              className="my-input"
             />
           </div>
         </div>

@@ -54,6 +54,9 @@ Version: 1.0.2
   --line-height30: 1.7;
 }
 
+.my-input::placeholder {
+  color: red;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
