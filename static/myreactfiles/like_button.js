@@ -97,8 +97,8 @@ class LikeButton extends React.Component {
             <a
               className="video-play-btn-hover"
               href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-            >
-              
+             > 
+              <FontAwesomeIcon icon="fa-regular fa-circle-play" />
               <h6 className="d-inline-block">how we work</h6>
             </a>
           </div>
