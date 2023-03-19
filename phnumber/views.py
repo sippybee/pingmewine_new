@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views import View
-import json
-import logging
-import os
-
+from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
 from twilio.rest import Client
+from twilio.twiml.messaging_response import MessagingResponse
+import json
+import logging
+import os
 from .models import Deal
 from .forms import ClientForm
 logger = logging.getLogger(__name__)
@@ -108,3 +109,18 @@ class PingMeView(View):
         print("Not valid")
 
         return render(request, "index_api.html", {'form': form})
+    
+@csrf_exempt
+class WineChatView(View):
+    def post(self, request, *args, **kwargs):
+        incoming_msg = request.POST.get('Body', '').lower()
+        print(incoming_msg)
+        resp = MessagingResponse()
+        msg = resp.message()
+        responded = False
+        if 'hi' in incoming_msg:
+            my_response = "Buy some wine!"
+            msg.body(my_response)
+            responded = True
+            print(dir(msg))
+
