@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.generic.list import ListView
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
@@ -111,7 +112,7 @@ class PingMeView(View):
 
         return render(request, "index_api.html", {'form': form})
     
-@csrf_exempt
+@method_decorator(csrf_exempt, name='dispatch')
 class WineChatView(View):
     def post(self, request, *args, **kwargs):
         incoming_msg = request.POST.get('Body', '').lower()
