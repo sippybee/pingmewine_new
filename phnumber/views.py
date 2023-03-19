@@ -116,15 +116,22 @@ class PingMeView(View):
 class WineChatView(View):
     def post(self, request, *args, **kwargs):
         incoming_msg = request.POST.get('Body', '').lower()
+        phone_number =request.POST['From']
+        print("Phone number", phone_number)
         print(incoming_msg)
         print("DDDDDD",request.POST)
         resp = MessagingResponse()
         msg = resp.message()
         responded = False
-        if 'hi' in incoming_msg:
+        if incoming_msg == 'hi':
             my_response = "Buy some wine!"
             msg.body(my_response)
             responded = True
             print(dir(msg))
-            return HttpResponse('Success!')
+        else:
+            my_response = "Be polite!"
+            msg.body(my_response)
+            responded = True
+            print(dir(msg))
+        return HttpResponse('Success!')
 
