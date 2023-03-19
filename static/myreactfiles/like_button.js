@@ -58,7 +58,7 @@ class LikeButton extends React.Component {
         <div className="col-md-12">
           {this.state.error ? (
             <h6 className="subtitle wow  fadeInLeft animated">
-              Something went wrong, use 1234567890 format, we will reload the page
+              Something went wrong, use 5062345678 format, we will reload the page
             </h6>
           
           ) : (
