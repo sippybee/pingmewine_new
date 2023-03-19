@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from django.views.generic.list import ListView
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
@@ -124,4 +125,5 @@ class WineChatView(View):
             msg.body(my_response)
             responded = True
             print(dir(msg))
+            return HttpResponse('Success!')
 
