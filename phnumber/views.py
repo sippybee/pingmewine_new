@@ -115,6 +115,7 @@ class WineChatView(View):
     def post(self, request, *args, **kwargs):
         incoming_msg = request.POST.get('Body', '').lower()
         print(incoming_msg)
+        print("DDDDDD",request.POST)
         resp = MessagingResponse()
         msg = resp.message()
         responded = False
