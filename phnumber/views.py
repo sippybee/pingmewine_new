@@ -122,16 +122,6 @@ class WineChatView(View):
         print("DDDDDD",request.POST)
         resp = MessagingResponse()
         msg = resp.message()
-        responded = False
-        if incoming_msg == 'hi':
-            my_response = "Buy some wine!"
-            msg.body(my_response)
-            print(msg)
-            print("line 130")
-        else:
-            my_response = "Be polite!"
-            msg.body(my_response)
-            responded = True
-            print(dir(msg))
+        msg.body('Sorry, I am unable to get weather data for that location.')
         return str(resp)
 
