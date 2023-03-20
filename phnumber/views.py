@@ -8,7 +8,8 @@ from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
 from twilio.rest import Client
-from twilio.twiml.messaging_response import MessagingResponse
+# from twilio.twiml.messaging_response import MessagingResponse
+from twilio.twiml.messaging_response import Message, MessagingResponse
 import json
 import logging
 import os
@@ -123,5 +124,9 @@ class WineChatView(View):
         resp = MessagingResponse()
         msg = resp.message()
         msg.body('Sorry, I am unable to get weather data for that location.')
-        return resp
+        resp = MessagingResponse()
+
+        replyText = 'Sorry, I am unable to get weather data for that location.'
+        resp.message('Hi\n\n' + replyText )
+        return str(resp)
 
