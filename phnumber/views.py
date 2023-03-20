@@ -133,5 +133,5 @@ class WineChatView(View):
             msg.body(my_response)
             responded = True
             print(dir(msg))
-        return HttpResponse('Success!')
+        return str(resp)
 
