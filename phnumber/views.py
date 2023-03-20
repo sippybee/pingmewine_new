@@ -113,17 +113,9 @@ class PingMeView(View):
 
         return render(request, "index_api.html", {'form': form})
     
-@method_decorator(csrf_exempt, name='dispatch')
-class WineChatView(View):
-    def post(self, request, *args, **kwargs):
-        incoming_msg = request.POST.get('Body', '').lower()
-        phone_number =request.POST['From']
-        print("Phone number", phone_number)
-        print(incoming_msg)
-        print("DDDDDD",request.POST)
-        resp = MessagingResponse()
-        resp.message('Sorry, I am unable to get weather data for that location.')
-        print(resp, str(resp))
-        print("Fuck you")
-        return str(resp)
-
+@csrf_exempt
+def sms_reply(request):
+    incoming_msg = request.values.get('Body', '').lower()
+    response = MessagingResponse()
+    response.message(f"Thanks for your message: {incoming_msg}")
+    return str(response)

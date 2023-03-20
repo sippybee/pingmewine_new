@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from phnumber.views import send_message, DealDetailView, PingMeView, WineChatView
-
+from phnumber.views import send_message, DealDetailView, PingMeView, sms_reply
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sendme/', send_message),
-    path('winechat/', WineChatView.as_view()),
+    path('winechat/', sms_reply),
     path('', PingMeView.as_view()),
 ]
 
