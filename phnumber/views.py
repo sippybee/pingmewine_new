@@ -115,7 +115,7 @@ class PingMeView(View):
     
 @csrf_exempt
 def sms_reply(request):
-    incoming_msg = request.values.get('Body', '').lower()
+    # incoming_msg = request.values.get('Body', '').lower()
     response = MessagingResponse()
-    response.message(f"Thanks for your message: {incoming_msg}")
+    response.message(f"Thanks for your message: huy")
     return str(response)
