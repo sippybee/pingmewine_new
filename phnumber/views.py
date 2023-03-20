@@ -122,11 +122,7 @@ class WineChatView(View):
         print(incoming_msg)
         print("DDDDDD",request.POST)
         resp = MessagingResponse()
-        msg = resp.message()
-        msg.body('Sorry, I am unable to get weather data for that location.')
-        resp = MessagingResponse()
-
-        replyText = 'Sorry, I am unable to get weather data for that location.'
-        resp.message('Hi\n\n' + replyText )
+        resp.message('Sorry, I am unable to get weather data for that location.')
+        print("Fuck you")
         return str(resp)
 
