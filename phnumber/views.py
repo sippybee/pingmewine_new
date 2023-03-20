@@ -117,5 +117,8 @@ class PingMeView(View):
 def sms_reply(request):
     # incoming_msg = request.values.get('Body', '').lower()
     response = MessagingResponse()
-    response.message(f"Thanks for your message: huy")
+    # response.message(f"Thanks for your message: huy")
+    message = Message()
+    message.body('Hello World!')
+    response.append(message)
     return str(response)
