@@ -126,8 +126,8 @@ class WineChatView(View):
         if incoming_msg == 'hi':
             my_response = "Buy some wine!"
             msg.body(my_response)
-            responded = True
-            print(dir(msg))
+            print(msg)
+            print("line 130")
         else:
             my_response = "Be polite!"
             msg.body(my_response)
