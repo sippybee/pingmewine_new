@@ -123,5 +123,5 @@ class WineChatView(View):
         resp = MessagingResponse()
         msg = resp.message()
         msg.body('Sorry, I am unable to get weather data for that location.')
-        return str(resp)
+        return resp
 
