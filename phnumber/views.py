@@ -121,5 +121,5 @@ def sms_reply(request):
     # response.message(f"Thanks for your message: huy")
     # message = Message()
     # message.body('Hello World!')
-    response.message('Huy!')
+    response.message('Huy rhr!')
     return str(response)
