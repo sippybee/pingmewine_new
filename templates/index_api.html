@@ -1,0 +1,300 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B076EQ3HL0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B076EQ3HL0');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PingMe Wine - Enjoy big savings on high-quality wines</title>
+    <link rel=icon href="assets/img/favicon.png" sizes="20x20" type="image/png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-TqCtqBnV7Qfe8JZ43xOq3wq0IK+gQam8HQz9lR0JbdcgAtvkpROG8lnJ1e5Sh14BdC4fM4qw4jC9LJQzXPoY6Q=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.3/babel.min.js"></script>
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/babel" src="{% static 'myreactfiles/like_button.js' %}"></script>
+    
+    
+
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <!-- <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div> -->
+    <!-- preloader area end -->
+
+    <!-- search popup start-->
+    <div class="td-search-popup" id="td-search-popup">
+        <form action="index.html" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- search popup end-->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-area navbar-area-2 navbar-expand-lg">
+        <div class="container nav-container">
+            <div class="responsive-mobile-menu">
+                <button class="menu toggle-btn d-block d-lg-none" data-target="#itech_main_menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-left"></span>
+                    <span class="icon-right"></span>
+                </button>
+            </div>
+            <div class="logo">
+                <a href="https://pingmewine.com/"><img src="{% static 'assets/img/logo3.png' %}" alt="img"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="itech_main_menu">
+                <ul class="navbar-nav menu-open text-lg-center ps-lg-5">
+                    <li class="menu-item-has-children">
+                        <a href="https://pingmewine.com">Home</a>
+                        <ul class="sub-menu">
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="https://pingmewine.com#how-we-work">How we work</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">(352) SIP WINE</a>
+                    </li>
+                    <li><a href="mailto:wine@sippybee.com">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="nav-right-part nav-right-part-desktop align-self-center">
+                <a class="btn btn-border-base" href="https://sippybee.com/">SippyBee</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- page title start -->
+    <div class="banner-area bg-relative banner-area-2 bg-cover"
+        style="background-image: url({% static '/assets/img/bg/8.png' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="banner-inner pe-xl-5">
+                        <h6 class="subtitle wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                            Enjoy big savings on high-quality wines</h6>
+                        <h2 class="title wow animated fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.4s">Get
+                            outstanding <span>value wines</span> on your phone.</h2>
+                        <p class="content pe-xl-5 wow animated fadeInLeft" data-wow-duration="1.5s"
+                            data-wow-delay="0.5s">Subscribe with your phone number to receive our expertly selected weekly wine deals, scouted using mordern technology to bring you the tastiest wines at unbeatable value.</p>
+                        <div id="like_button_container"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-9 wow animated fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                    <div class="banner-thumb-2 mt-4 mt-lg-0">
+                        <img class="banner-animate-img banner-animate-img-4"
+                            src="{% static 'assets/img/banner-2/3.png' %}" alt="img">
+                        <div class="main-img-wrap">
+                            <img class="banner-animate-img banner-animate-img-1 left_image_bounce"
+                                src="{% static 'assets/img/banner-2/4.png' %}" alt="img">
+                            <img class="banner-animate-img banner-animate-img-2 left_image_bounce"
+                                src="{% static 'assets/img/banner-2/6.png' %}" alt="img">
+                            <img class="banner-animate-img banner-animate-img-3 top_image_bounce"
+                                src="{% static 'assets/img/banner-2/free3.png' %}" alt="img">
+                            <img class="main-img" src="{% static 'assets/img/banner-2/71.png' %}" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner end -->
+
+    <!-- about area start -->
+    <div id="how-we-work" class="about-area pd-top-120 pd-bottom-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0 wow animated fadeInLeft" data-wow-duration="1.5s"
+                    data-wow-delay="0.3s">
+                    <div class="about-thumb-inner">
+                        <img class="main-img" src="{% static 'assets/img/banner-2/9.png' %}" alt="img">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow animated fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                    <div class="section-title mb-0">
+                        <h6 class="sub-title">HOW WE WORK</h6>
+
+                        <p class="content mb-4">We scour the wine market, using modern technology, for inconsistencies to bring you exceptional
+                            deals.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="single-list-inner style-check style-heading style-check mb-3">
+                                    <li><i class="fas fa-check-circle"></i> We scrape the market</li>
+                                    <li><i class="fas fa-check-circle"></i> Finding unbeatable deals</li>
+                                    <li><i class="fas fa-check-circle"></i> Deals approved by our wine experts</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="single-list-inner style-check style-heading style-check mb-3">
+                                    <li><i class="fas fa-check-circle"></i> You receive 1-2 deals a week</li>
+                                    <li><i class="fas fa-check-circle"></i> Place an order if you like the deal</li>
+                                    <li><i class="fas fa-check-circle"></i> Enjoy the free shipping</li>
+                                </ul>
+                            </div>
+                        </div>
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/mggFpINDIl8" frameborder="0"
+                                allowfullscreen></iframe>
+                        <a class="btn btn-border-base" href="https://www.youtube.com/@sippybee79/videos" target="_blank">More videos <i
+                                class="fa fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about area end -->
+    
+    <!-- footer area start -->
+    <footer class="footer-area footer-area-2 bg-gray mt-0 pd-top-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget widget_about">
+                        <div class="thumb">
+                            <img src="{% static 'assets/img/logo3.png' %}" alt="img">
+                        </div>
+                        <div class="details">
+                            <p>Get the best value on your wine purchases with our market-savvy approach to finding discrepancies and deals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ps-xl-5">
+                    <div class="widget widget_nav_menu">
+                        <h4 class="widget-title">How we work</h4>
+                        <ul>
+                            <li style="color:#CE4230"><i class="fas fa-check-circle"></i> We scrape the market</li>
+                            <li style="color:#CE4230"><i class="fas fa-check-circle"></i> Finding unbeatable deals</li>
+                            <li style="color:#CE4230"><i class="fas fa-check-circle"></i> Deals approved by our wine experts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 ps-xl-5">
+                    <div class="widget widget_nav_menu">
+                        <h4 class="widget-title">Discover amazing wine deals</h4>
+                        <ul>
+                            <li style="color:#CE4230"><i class="fas fa-check-circle"></i> You receive 1-2 deals a week</li>
+                            <li style="color:#CE4230"><i class="fas fa-check-circle"></i> Place an order if you like the deal</li>
+                            <li style="color:#CE4230"><i class="fas fa-check-circle"></i> Enjoy the free shipping</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget widget-recent-post">
+                        <h4 class="widget-title">Contact us</h4>
+                        <div class="widget widget_contact">
+                            <ul class="details">
+                                <li><i class="fa fa-map-marker-alt"></i>4751 Distribution CT, Orlando, FL, US
+                                    32822-4957
+                                </li>
+                                <li class="mt-3"><i class="fa fa-phone-alt"></i> (352) SIP WINE</li>
+                                <li class="mt-2"><i class="fas fa-envelope"></i> wine@sippybee.com</li>
+                            </ul>
+                            <ul class="social-media mt-4">
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p>© SippyBee LLC 2023 | All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 text-lg-end">
+                        <a href="#">Trams & Condition</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <!-- Load our React component. -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/fontawesome.min.js' %}"></script>
+    <script src="{% static 'assets/js/magnific.min.js' %}"></script>
+    <script src="{% static 'assets/js/nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.min.js' %}"></script>
+    <script src="{% static 'assets/js/counter-up.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoint.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+    <!-- main js  -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
