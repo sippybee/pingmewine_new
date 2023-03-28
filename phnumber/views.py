@@ -116,12 +116,21 @@ class PingMeView(View):
     
 @csrf_exempt
 def sms_reply(request):
-    print(dir(requests))
+    
     incoming_msg = request.POST.get('Body', '').lower()
-    print(incoming_msg)
-    print("DDDD",request.POST)
-    phone_number = request.POST.get("from"," ")
-    print(phone_number)
+    phone_number = request.POST.get("From"," ")
+    url = "https://sippybee.com/ping/api/create/"
+    data = {
+        "phone_number": phone_number
+    }
+    try:
+        response = requests.post(url, data=data)
+        response.raise_for_status() # check for any HTTP errors
+        print(response.json())
+        sent = True
+    except requests.exceptions.HTTPError as err:
+        print(err)
+        error = True
     # response = MessagingResponse()
     # message = Message()
     # message.body('Hello World!')
