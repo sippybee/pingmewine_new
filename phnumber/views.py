@@ -131,11 +131,7 @@ def sms_reply(request):
     except requests.exceptions.HTTPError as err:
         print(err)
         error = True
-    # response = MessagingResponse()
-    # message = Message()
-    # message.body('Hello World!')
-    # response.append(message)
-    # # response.addHeader('X-Frame-Options', 'SAMEORIGIN')
-    # return str(response)
+    
+    return str(response)
 
     
