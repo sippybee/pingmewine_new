@@ -12,6 +12,7 @@ from twilio.rest import Client
 from twilio.twiml.messaging_response import Message, MessagingResponse
 import json
 import logging
+import requests
 import os
 from .models import Deal
 from .forms import ClientForm
@@ -115,12 +116,14 @@ class PingMeView(View):
     
 @csrf_exempt
 def sms_reply(request):
-    # incoming_msg = request.values.get('Body', '').lower()
-    response = MessagingResponse()
-    message = Message()
-    message.body('Hello World!')
-    response.append(message)
-    # response.addHeader('X-Frame-Options', 'SAMEORIGIN')
-    return str(response)
+    incoming_msg = request.values.get('Body', '').lower()
+    print(incoming_msg)
+    print("DDDD",request.values)
+    # response = MessagingResponse()
+    # message = Message()
+    # message.body('Hello World!')
+    # response.append(message)
+    # # response.addHeader('X-Frame-Options', 'SAMEORIGIN')
+    # return str(response)
 
     

@@ -45,7 +45,7 @@ social-auth-core==4.3.0
 sqlparse==0.4.3
 starkbank-ecdsa==2.2.0
 tweepy==4.12.1
-twilio==7.16.4
+twilio==7.16.5
 urllib3==1.26.14
 Werkzeug==2.2.3
 whitenoise==6.3.0
