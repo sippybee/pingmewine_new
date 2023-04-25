@@ -70,7 +70,7 @@ class LikeButton extends React.Component {
               onChange={this.handleInputChange}
               type="text"
               name="phone"
-              placeholder="Your Phone Number e.g. 5062345678"
+              placeholder="Enter Phone Number e.g. 5062345678"
               id="phone"
               className="my-input"
             />
@@ -88,7 +88,7 @@ class LikeButton extends React.Component {
               }
             }}
           >
-            Sign me up! I'am 21+
+            Sign me up! I'm 21+
           </button></a>
           <div
             className="d-inline-block align-self-center wow animated fadeInLeft"
