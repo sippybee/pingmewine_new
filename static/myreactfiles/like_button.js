@@ -82,13 +82,14 @@ class LikeButton extends React.Component {
             data-wow-duration="1.5s"
             data-wow-delay="0.6s"
             type="submit"
+            style={{ fontSize: '1.5em' }} 
             onClick={() => {
               if (this.state.error) {
                 this.setState({  error: false });
               }
             }}
           >
-            Sign me up! I'm 21+
+            SIGN ME UP!
           </button></a>
           <div
             className="d-inline-block align-self-center wow animated fadeInLeft"
