@@ -32,7 +32,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         TMPL = '''{}\n\n{}\n\n{}'''.strip()
         greeting = 'Buy 3 bottles of sparkling wine at $16 each and get a FREE bottle of bubbly — that’s only $12 per bottle!'.strip() 
-        first = "We are open on Dec 25th, from 12pm-3pm".strip() 
+        first = "TIPSY is open on December 25 from 12:00 PM to 3:00 PM. Today, we are open until 9:00 PM.".strip() 
         # second = "Join today and receive a complimentary decanter with your first delivery on Feb 28th!".strip() 
         third = "Stop by 584 Myrtle Ave., or order now at https://itipsy.com/cava".strip() 
     
@@ -42,12 +42,12 @@ class Command(BaseCommand):
         # numbers_all = Phonenumber.objects.all()
         # numbers = [(n,n.phone_number.as_e164) for n in numbers_all]
         numbers = []
-        # numbers = get_phone_numbers(PATH)
+        numbers = get_phone_numbers(PATH)
         numbers.append('2013136587')
         # numbers.append('7323097540')
         counter = 0
         for to_number in numbers:
-            # print(to_number)
+            print(to_number)
             try:
                 message = client.messages.create(
                     body = TMPL.format(greeting, first, third),
@@ -69,5 +69,5 @@ class Command(BaseCommand):
                 print("Message not sent")
                 print(f'Number: {to_number} not sent')
         print("Counter",counter)
-        numbers = get_phone_numbers(PATH)
-        print(numbers)
+        # numbers = get_phone_numbers(PATH)
+        # print(numbers)
