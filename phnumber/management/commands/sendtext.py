@@ -20,7 +20,7 @@ def send_message(message,PHONENUMBER):
     message = client.messages.create(
         body = message,
         from_ = twilio_number,
-        media_url=['https://winecopilot.com/static/img/PMW.png'],
+        # media_url=['https://winecopilot.com/static/img/PMW.png'],
         to=PHONENUMBER 
     )
     print("Created",dir(message))
@@ -51,7 +51,7 @@ class Command(BaseCommand):
             try:
                 message = client.messages.create(
                     body = TMPL.format(greeting, first, third),
-                    media_url=["https://tipsy.nyc3.digitaloceanspaces.com/Wine-Tasting-with-pizza.png"],
+                    # media_url=["https://tipsy.nyc3.digitaloceanspaces.com/Wine-Tasting-with-pizza.png"],
                     from_ = twilio_number,
                     to = to_number,
                 )
