@@ -4,7 +4,7 @@ from twilio.rest import Client
 import os
 # from apps.pingme.models import Phonenumber
 # from apps.accounts.models import PingStatus
-# from .util import get_phone_numbers
+from .util import get_phone_numbers
 
   
 PATH="/workspace/september2025.1.csv"
@@ -31,10 +31,10 @@ def send_message(message,PHONENUMBER):
 class Command(BaseCommand):
     def handle(self, *args, **options):
         TMPL = '''{}\n\n{}\n\n{}'''.strip()
-        greeting = 'A smooth Chianti made to be savored — Buy one, get the second 50% off! Just $18.00 a bottle.'.strip() 
-        first = "Buy now, or come This Friday from 6 - 7 PM to judge for yourself, Pizza is on us.".strip() 
+        greeting = 'Buy 3 bottles of sparkling wine at $16 each and get a FREE bottle of bubbly — that’s only $12 per bottle!'.strip() 
+        first = "We are open on Dec 25th, from 12pm-3pm".strip() 
         # second = "Join today and receive a complimentary decanter with your first delivery on Feb 28th!".strip() 
-        third = "Stop by 584 Myrtle Ave., or order now at https://itipsy.com/pic".strip() 
+        third = "Stop by 584 Myrtle Ave., or order now at https://itipsy.com/cava".strip() 
     
         # test
         client = Client(twilio_account_sid, twilio_auth_token)
@@ -51,7 +51,7 @@ class Command(BaseCommand):
             try:
                 message = client.messages.create(
                     body = TMPL.format(greeting, first, third),
-                    # media_url=["https://tipsy.nyc3.digitaloceanspaces.com/Wine-Tasting-with-pizza.png"],
+                    media_url=["https://tipsy.nyc3.digitaloceanspaces.com/BubblesMarathon.png"],
                     from_ = twilio_number,
                     to = to_number,
                 )
@@ -69,5 +69,5 @@ class Command(BaseCommand):
                 print("Message not sent")
                 print(f'Number: {to_number} not sent')
         print("Counter",counter)
-        # numbers = get_phone_numbers(PATH)
+        numbers = get_phone_numbers(PATH)
         print(numbers)
